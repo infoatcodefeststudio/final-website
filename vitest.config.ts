@@ -38,6 +38,14 @@ export default defineConfig({
           setupFiles: ["./src/vitest.setup.ts"],
         },
       },
+      {
+        extends: true,
+        test: {
+          name: "server",
+          environment: "node",
+          include: ["server/**/*.test.ts"],
+        },
+      },
     ],
   },
 });

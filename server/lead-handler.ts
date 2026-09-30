@@ -1,8 +1,7 @@
 import type { IncomingMessage, ServerResponse } from "node:http";
-import { leadPayloadSchema } from "./lead-schema.ts";
-import { sendLeadEmail } from "./zeptomail.ts";
+import { processLeadSubmission, type LeadEnv } from "./process-lead.ts";
 
-export type LeadEnv = Record<string, string | undefined>;
+export type { LeadEnv };
 
 async function readJsonBody(req: IncomingMessage): Promise<unknown> {
   const chunks: Buffer[] = [];
@@ -27,29 +26,22 @@ export async function handleLeadRequest(
   res: ServerResponse,
   env: LeadEnv,
 ): Promise<void> {
-  if (req.method !== "POST") {
-    sendJson(res, 405, { ok: false, message: "Method not allowed" });
-    return;
-  }
-
-  try {
-    const json = await readJsonBody(req);
-    const parsed = leadPayloadSchema.safeParse(json);
-    if (!parsed.success) {
-      sendJson(res, 400, {
+  let json: unknown;
+  if (req.method === "POST") {
+    try {
+      json = await readJsonBody(req);
+    } catch (error) {
+      const message =
+        error instanceof Error ? error.message : "Failed to send notification";
+      console.error("[api/leads]", message);
+      sendJson(res, 500, {
         ok: false,
-        message: "Invalid form data",
-        issues: parsed.error.flatten().fieldErrors,
+        message: "Failed to send your message. Please try again.",
       });
       return;
     }
-
-    await sendLeadEmail(env, parsed.data);
-    sendJson(res, 200, { ok: true });
-  } catch (error) {
-    const message =
-      error instanceof Error ? error.message : "Failed to send notification";
-    console.error("[api/leads]", message);
-    sendJson(res, 500, { ok: false, message: "Failed to send your message. Please try again." });
   }
+
+  const result = await processLeadSubmission(req.method, json, env);
+  sendJson(res, result.status, result.body);
 }

@@ -1,0 +1,11 @@
+{
+  "functions": {
+    "api/leads.ts": {
+      "maxDuration": 10,
+      "includeFiles": "server/**"
+    }
+  },
+  "rewrites": [
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}
