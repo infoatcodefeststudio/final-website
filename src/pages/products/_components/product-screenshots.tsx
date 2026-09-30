@@ -22,13 +22,13 @@ export default function ProductScreenshots({ product }: { product: Product }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
-              className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
+              className="group overflow-hidden rounded-2xl border border-border/80 bg-card shadow-sm"
             >
               <img
                 src={screenshot.url}
                 alt={screenshot.caption}
                 loading="lazy"
-                className="w-full border-b border-border object-cover"
+                className="w-full border-b border-border object-cover transition-transform duration-500 group-hover:scale-[1.02]"
               />
               <figcaption className="px-4 py-3 text-sm text-muted-foreground">
                 {screenshot.caption}

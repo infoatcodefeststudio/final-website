@@ -31,7 +31,7 @@ export default function SectionHeading({
       {eyebrow && (
         <span
           className={cn(
-            "inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-wide",
+            "inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold tracking-wider uppercase",
             light
               ? "border-white/15 bg-white/10 text-white/90"
               : "border-primary/20 bg-primary/5 text-primary",
@@ -51,7 +51,7 @@ export default function SectionHeading({
       {description && (
         <p
           className={cn(
-            "mt-4 text-balance text-base leading-relaxed sm:text-lg",
+            "mt-4 text-pretty text-base leading-relaxed sm:text-lg",
             light ? "text-white/70" : "text-muted-foreground",
           )}
         >

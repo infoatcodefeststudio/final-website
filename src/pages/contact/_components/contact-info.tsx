@@ -9,7 +9,7 @@ export default function ContactInfo() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8"
+      className="flex flex-col gap-4 site-card p-6 sm:p-8"
     >
       <h3 className="text-lg font-bold text-foreground">Get in Touch</h3>
       <p className="text-sm leading-relaxed text-muted-foreground">

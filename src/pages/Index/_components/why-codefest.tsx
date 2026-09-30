@@ -60,9 +60,9 @@ export default function WhyCodefest() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="rounded-2xl border border-border bg-card p-6 shadow-sm transition-shadow hover:shadow-md"
+              className="site-card-interactive group p-6"
             >
-              <div className="flex size-11 items-center justify-center rounded-xl bg-gradient-to-br from-primary/15 to-accent/15 text-primary">
+              <div className="flex size-11 items-center justify-center rounded-xl bg-gradient-to-br from-primary/15 to-accent/15 text-primary transition-transform duration-300 group-hover:scale-105">
                 <value.icon className="size-5" />
               </div>
               <h3 className="mt-4 font-bold text-foreground">

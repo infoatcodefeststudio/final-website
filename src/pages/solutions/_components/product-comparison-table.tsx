@@ -28,7 +28,7 @@ export default function ProductComparisonTable() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="mt-10 overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
+          className="site-card mt-10 overflow-x-auto"
         >
           <Table>
             <TableHeader>
@@ -48,7 +48,7 @@ export default function ProductComparisonTable() {
                   <TableCell className="whitespace-nowrap font-semibold text-foreground">
                     <Link
                       to={`/products/${product.slug}`}
-                      className="hover:text-primary"
+                      className="transition-colors hover:text-primary"
                     >
                       {product.shortName}
                     </Link>

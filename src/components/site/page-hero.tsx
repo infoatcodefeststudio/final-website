@@ -17,15 +17,16 @@ export default function PageHero({
   return (
     <section className={cn("relative overflow-hidden bg-background", className)}>
       <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="bg-grid-fade absolute inset-0" />
         <div className="absolute -top-32 -left-32 size-96 rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute top-10 right-0 size-[26rem] rounded-full bg-accent/10 blur-3xl" />
       </div>
-      <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
+      <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <motion.span
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary"
+          className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold tracking-wider uppercase text-primary"
         >
           {eyebrow}
         </motion.span>
@@ -41,7 +42,7 @@ export default function PageHero({
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.12, ease: "easeOut" }}
-          className="mx-auto mt-5 max-w-2xl text-balance text-lg leading-relaxed text-muted-foreground"
+          className="mx-auto mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground"
         >
           {description}
         </motion.p>

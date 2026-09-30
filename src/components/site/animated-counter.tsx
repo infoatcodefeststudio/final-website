@@ -47,7 +47,7 @@ export default function AnimatedCounter({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="text-center"
+      className="site-card px-4 py-6 text-center"
     >
       <div className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
         <CounterValue value={value} suffix={suffix} />

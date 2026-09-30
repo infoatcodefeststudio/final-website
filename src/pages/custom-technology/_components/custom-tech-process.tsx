@@ -37,7 +37,11 @@ export default function CustomTechProcess() {
           title="How We Build Your Custom Solution"
         />
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="relative mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div
+            aria-hidden
+            className="absolute top-10 right-[12%] left-[12%] hidden h-px bg-gradient-to-r from-primary/0 via-primary/25 to-primary/0 lg:block"
+          />
           {STEPS.map((step, index) => (
             <motion.div
               key={step.number}
@@ -45,7 +49,7 @@ export default function CustomTechProcess() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-              className="relative rounded-2xl border border-border bg-card p-6 shadow-sm"
+              className="site-card relative p-6"
             >
               <span className="text-4xl font-extrabold text-primary/15">
                 {step.number}

@@ -89,7 +89,7 @@ export default function DemoRequestForm() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="flex flex-col items-center rounded-2xl border border-border bg-card p-10 text-center shadow-sm"
+        className="flex flex-col items-center site-card p-10 text-center"
       >
         <div className="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/15 to-accent/15 text-primary">
           <CheckCircle2 className="size-7" />
@@ -105,7 +105,7 @@ export default function DemoRequestForm() {
   }
 
   return (
-    <div className="rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
+    <div className="site-card p-6 sm:p-8">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}

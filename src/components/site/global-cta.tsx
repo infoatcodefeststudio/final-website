@@ -13,6 +13,7 @@ export default function GlobalCta({
   return (
     <section className="relative overflow-hidden bg-[oklch(0.14_0.03_264)] py-20 sm:py-24">
       <div className="pointer-events-none absolute inset-0">
+        <div className="bg-grid-fade absolute inset-0 opacity-40" />
         <div className="absolute -top-24 left-1/4 size-96 rounded-full bg-primary/25 blur-3xl" />
         <div className="absolute -bottom-24 right-1/4 size-96 rounded-full bg-accent/25 blur-3xl" />
       </div>
@@ -26,7 +27,7 @@ export default function GlobalCta({
         <h2 className="text-balance text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
           {headline}
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-balance text-base leading-relaxed text-white/70 sm:text-lg">
+        <p className="mx-auto mt-4 max-w-xl text-pretty text-base leading-relaxed text-white/70 sm:text-lg">
           {text}
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -34,14 +35,14 @@ export default function GlobalCta({
             asChild
             size="lg"
             variant="secondary"
-            className="w-full sm:w-auto"
+            className="w-full rounded-lg sm:w-auto"
           >
             <Link to="/#products">
               Explore Products
               <ArrowUpRight className="size-4" />
             </Link>
           </Button>
-          <Button asChild size="lg" className="w-full sm:w-auto">
+          <Button asChild size="lg" className="w-full rounded-lg sm:w-auto">
             <Link to="/book-a-demo">
               <CalendarCheck className="size-4" />
               Book a Demo

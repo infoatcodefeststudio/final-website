@@ -11,6 +11,7 @@ export default function ProductHero({ product }: { product: Product }) {
   return (
     <section className="relative overflow-hidden bg-background">
       <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="bg-grid-fade absolute inset-0" />
         <div className="absolute -top-32 -left-32 size-96 rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute top-10 right-0 size-[26rem] rounded-full bg-accent/10 blur-3xl" />
       </div>
@@ -31,7 +32,7 @@ export default function ProductHero({ product }: { product: Product }) {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.05 }}
-          className="mt-5 inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary"
+          className="mt-5 inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold tracking-wider uppercase text-primary"
         >
           {product.shortName}
         </motion.span>

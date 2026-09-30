@@ -20,7 +20,7 @@ export default function ProductBenefits({ product }: { product: Product }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="flex items-start gap-3 rounded-xl border border-border bg-card p-4 shadow-sm"
+              className="flex items-start gap-3 rounded-xl border border-border/80 bg-card p-4 shadow-sm transition-colors hover:border-primary/25"
             >
               <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
                 <Check className="size-3.5" />

@@ -4,7 +4,7 @@ import { products } from "@/lib/products.ts";
 
 export default function ProductShowcase() {
   return (
-    <section id="products" className="bg-secondary/30 py-20 sm:py-24">
+    <section id="products" className="scroll-mt-24 bg-secondary/30 py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Our Products"

@@ -16,10 +16,10 @@ export default function ProductFaq({ product }: { product: Product }) {
           title="Frequently Asked Questions"
         />
 
-        <Accordion type="single" collapsible className="mt-10">
+        <Accordion type="single" collapsible className="site-card mt-10 px-5 sm:px-6">
           {product.faqs.map((faq, index) => (
             <AccordionItem key={faq.question} value={`item-${index}`}>
-              <AccordionTrigger className="text-base font-semibold text-foreground">
+              <AccordionTrigger className="text-base font-semibold text-foreground hover:no-underline hover:text-primary">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="text-sm leading-relaxed text-muted-foreground">

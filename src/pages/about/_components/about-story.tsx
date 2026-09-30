@@ -9,7 +9,7 @@ export default function AboutStory() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="space-y-5 text-balance text-base leading-relaxed text-muted-foreground sm:text-lg"
+          className="space-y-5 text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg"
         >
           <p>
             Codefest Studio was built on a simple belief: technology should

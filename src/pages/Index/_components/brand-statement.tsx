@@ -2,7 +2,10 @@ import { motion } from "motion/react";
 
 export default function BrandStatement() {
   return (
-    <section className="bg-background py-16 sm:py-20">
+    <section className="relative overflow-hidden bg-background py-16 sm:py-20">
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute top-1/2 left-1/2 size-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl" />
+      </div>
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <motion.p
           initial={{ opacity: 0, y: 16 }}

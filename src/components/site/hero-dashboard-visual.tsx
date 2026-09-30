@@ -13,7 +13,7 @@ export default function HeroDashboardVisual() {
       initial={{ opacity: 0, scale: 0.94, y: 20 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
-      className="relative mx-auto w-full max-w-lg lg:mx-0"
+      className="relative mx-auto w-full max-w-lg lg:mx-0 lg:justify-self-end"
     >
       <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-br from-primary/25 via-accent/20 to-transparent blur-2xl" />
       <div className="rounded-2xl border border-white/10 bg-[oklch(0.16_0.03_264)] p-5 shadow-2xl">
@@ -23,7 +23,8 @@ export default function HeroDashboardVisual() {
             <span className="size-2.5 rounded-full bg-amber-400/80" />
             <span className="size-2.5 rounded-full bg-emerald-400/80" />
           </div>
-          <span className="text-xs font-medium text-white/50">
+          <span className="flex items-center gap-1.5 text-xs font-medium text-white/50">
+            <span className="live-dot size-1.5 rounded-full bg-emerald-400" />
             Codefest Operations Console
           </span>
         </div>
@@ -38,7 +39,7 @@ export default function HeroDashboardVisual() {
               className="rounded-xl border border-white/10 bg-white/5 p-3"
             >
               <stat.icon className="size-4 text-primary" />
-              <div className="mt-2 text-lg font-bold text-white">
+              <div className="mt-2 text-lg font-bold tracking-tight text-white">
                 {stat.value}
               </div>
               <div className="text-[10px] leading-tight text-white/50">
@@ -76,7 +77,7 @@ export default function HeroDashboardVisual() {
 
         <div className="mt-4 grid grid-cols-2 gap-3">
           <div className="rounded-xl border border-white/10 bg-white/5 p-3">
-            <div className="text-[10px] uppercase tracking-wide text-white/40">
+            <div className="text-[10px] tracking-wide text-white/40 uppercase">
               Active Vehicles
             </div>
             <div className="mt-1 text-base font-semibold text-white">
@@ -84,7 +85,7 @@ export default function HeroDashboardVisual() {
             </div>
           </div>
           <div className="rounded-xl border border-white/10 bg-white/5 p-3">
-            <div className="text-[10px] uppercase tracking-wide text-white/40">
+            <div className="text-[10px] tracking-wide text-white/40 uppercase">
               Pending Dispatch
             </div>
             <div className="mt-1 text-base font-semibold text-white">76</div>

@@ -23,9 +23,9 @@ export default function SolutionCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.06, ease: "easeOut" }}
-      className="flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+      className="site-card-interactive group flex h-full flex-col p-6"
     >
-      <div className="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary/15 to-accent/15 text-primary">
+      <div className="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary/15 to-accent/15 text-primary transition-transform duration-300 group-hover:scale-105">
         <Icon className="size-6" />
       </div>
       <h3 className="mt-5 text-lg font-bold text-foreground">
@@ -40,7 +40,7 @@ export default function SolutionCard({
           <Link
             key={product.slug}
             to={`/products/${product.slug}`}
-            className="rounded-full border border-border bg-secondary/40 px-3 py-1 text-xs font-medium text-foreground/80 transition-colors hover:border-primary/30 hover:text-primary"
+            className="rounded-full border border-border bg-secondary/40 px-3 py-1 text-xs font-medium text-foreground/80 transition-colors hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
           >
             {product.shortName}
           </Link>

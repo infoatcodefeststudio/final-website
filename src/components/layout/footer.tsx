@@ -21,22 +21,22 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-2">
-              <span className="flex size-9 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-primary-foreground">
+            <Link to="/" className="inline-flex items-center gap-2 rounded-lg">
+              <span className="flex size-9 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-primary-foreground shadow-sm shadow-primary/20">
                 <Sparkles className="size-4.5" />
               </span>
               <span className="text-lg font-extrabold tracking-tight text-foreground">
                 Codefest <span className="text-primary">Studio</span>
               </span>
-            </div>
-            <p className="mt-4 max-w-xs text-sm text-muted-foreground">
+            </Link>
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
               Technology Solutions. Product Management. Business
               Transformation.
             </p>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-foreground">
+            <h3 className="text-sm font-semibold tracking-wide text-foreground">
               Quick Links
             </h3>
             <ul className="mt-4 space-y-2.5">
@@ -54,7 +54,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-foreground">
+            <h3 className="text-sm font-semibold tracking-wide text-foreground">
               Products
             </h3>
             <ul className="mt-4 space-y-2.5">
@@ -72,7 +72,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-foreground">Contact</h3>
+            <h3 className="text-sm font-semibold tracking-wide text-foreground">
+              Contact
+            </h3>
             <ul className="mt-4 space-y-2.5">
               <li>
                 <a

@@ -26,7 +26,7 @@ export default function AboutMissionVision() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-              className="rounded-2xl border border-border bg-card p-8 shadow-sm"
+              className="site-card p-8"
             >
               <div className="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary/15 to-accent/15 text-primary">
                 <statement.icon className="size-6" />

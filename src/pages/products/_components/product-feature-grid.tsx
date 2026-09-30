@@ -21,7 +21,7 @@ export default function ProductFeatureGrid({ product }: { product: Product }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.35, delay: (index % 9) * 0.03 }}
-              className="flex items-center gap-3 rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground/90 shadow-sm transition-colors hover:border-primary/30"
+              className="flex items-center gap-3 rounded-lg border border-border/80 bg-card px-4 py-3 text-sm text-foreground/90 shadow-sm transition-colors hover:border-primary/30 hover:bg-primary/5"
             >
               <LayoutGrid className="size-4 shrink-0 text-primary" />
               {feature}

@@ -31,6 +31,7 @@ export default function ProductDashboardPreview({
               <span className="size-2.5 rounded-full bg-emerald-400/80" />
             </div>
             <span className="flex items-center gap-1.5 text-xs font-medium text-white/50">
+              <span className="live-dot size-1.5 rounded-full bg-emerald-400" />
               <Activity className="size-3.5" />
               Live Operations Console
             </span>
