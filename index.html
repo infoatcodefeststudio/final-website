@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Codefest Studio | Technology Solutions & Enterprise Software Products</title>
+    <meta
+      name="description"
+      content="Codefest Studio provides customised technology solutions and ready-to-deploy enterprise products including Warehouse Management, Transport Management, Gate & Yard Management, Vendor Management, Hotel ERP and Inventory Management."
+    />
+    <meta name="author" content="Codefest Studio" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231e1b4b'/><text x='50' y='68' font-size='58' font-family='sans-serif' font-weight='700' fill='%23818cf8' text-anchor='middle'>C</text></svg>"
+    />
+
+    <meta property="og:title" content="Codefest Studio | Technology Solutions & Enterprise Software Products" />
+    <meta
+      property="og:description"
+      content="Customised technology solutions and ready-to-deploy enterprise products for Warehouse, Transport, Gate/Yard, Vendor, Hotel and Inventory Management."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://codefeststudio.com" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Codefest Studio | Technology Solutions & Enterprise Software Products" />
+    <meta
+      name="twitter:description"
+      content="Customised technology solutions and ready-to-deploy enterprise products for business operations."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+      crossorigin
+    />
+
+    <!-- Detect dark mode preference and set the class before next-themes loads. This avoids a flash of unstyled content (FOUC) when the page loads. -->
+    <script>
+      try {
+        let theme = localStorage.getItem("theme");
+        if (theme === "system" || !theme) {
+          let prefersDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+          theme = prefersDark ? "dark" : "light";
+        }
+        document.documentElement.classList.add(theme);
+      } catch (e) {}
+    </script>
+
+    <link href="/src/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
