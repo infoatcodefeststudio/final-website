@@ -14,6 +14,14 @@ function requireEnv(env: ZeptoEnv, key: keyof ZeptoEnv): string {
   return value;
 }
 
+function zeptoAuthorization(apiKey: string): string {
+  const trimmed = apiKey.trim();
+  if (/^Zoho-enczapikey\s+/i.test(trimmed)) {
+    return trimmed;
+  }
+  return `Zoho-enczapikey ${trimmed}`;
+}
+
 function escapeHtml(text: string): string {
   return text
     .replaceAll("&", "&amp;")
@@ -66,7 +74,7 @@ export async function sendLeadEmail(
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
-      Authorization: `Zoho-enczapikey ${apiKey}`,
+      Authorization: zeptoAuthorization(apiKey),
     },
     body: JSON.stringify({
       from: { address: fromEmail, name: fromName },
@@ -80,10 +88,8 @@ export async function sendLeadEmail(
       ],
       reply_to: [
         {
-          email_address: {
-            address: lead.email,
-            name: lead.fullName,
-          },
+          address: lead.email,
+          name: lead.fullName,
         },
       ],
       subject,
