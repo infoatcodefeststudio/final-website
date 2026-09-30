@@ -3,10 +3,11 @@ import DemoRequestForm from "@/pages/book-a-demo/_components/demo-request-form.t
 import { usePageSeo } from "@/hooks/use-page-seo.ts";
 
 export default function BookADemo() {
-  usePageSeo(
-    "Book a Demo | Codefest Studio",
-    "Book a personalized demo of Codefest Studio's technology products, or discuss a custom technology requirement with our team.",
-  );
+  usePageSeo({
+    title: "Book a Demo | Codefest Studio",
+    description:
+      "Book a personalized demo of Codefest Studio's technology products, or discuss a custom technology requirement with our team.",
+  });
 
   return (
     <>

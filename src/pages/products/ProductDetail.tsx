@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { getProductBySlug } from "@/lib/products.ts";
+import { SITE_NAME, SITE_WEBSITE_URL, siteUrl } from "@/lib/site.ts";
 import { usePageSeo } from "@/hooks/use-page-seo.ts";
 import NotFound from "@/pages/NotFound.tsx";
 import GlobalCta from "@/components/site/global-cta.tsx";
@@ -29,7 +30,24 @@ function ProductDetailContent({
 }: {
   product: NonNullable<ReturnType<typeof getProductBySlug>>;
 }) {
-  usePageSeo(product.seoTitle, product.seoDescription);
+  usePageSeo({
+    title: product.seoTitle,
+    description: product.seoDescription,
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: product.name,
+      description: product.seoDescription,
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      url: siteUrl(`/products/${product.slug}`),
+      provider: {
+        "@type": "Organization",
+        name: SITE_NAME,
+        url: SITE_WEBSITE_URL,
+      },
+    },
+  });
 
   return (
     <>

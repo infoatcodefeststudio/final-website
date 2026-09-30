@@ -2,9 +2,16 @@ import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Home } from "lucide-react";
 import { Button } from "@/components/ui/button.tsx";
+import { usePageSeo } from "@/hooks/use-page-seo.ts";
 
 export default function NotFound() {
   const location = useLocation();
+
+  usePageSeo({
+    title: "Page Not Found | Codefest Studio",
+    description: "This page does not exist.",
+    robots: "noindex, follow",
+  });
 
   useEffect(() => {
     console.error(

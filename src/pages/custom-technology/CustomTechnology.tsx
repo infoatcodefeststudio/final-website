@@ -5,10 +5,11 @@ import GlobalCta from "@/components/site/global-cta.tsx";
 import { usePageSeo } from "@/hooks/use-page-seo.ts";
 
 export default function CustomTechnology() {
-  usePageSeo(
-    "Custom Technology Solutions | Codefest Studio",
-    "When a ready-to-deploy product isn't the right fit, Codefest Studio designs and builds custom technology around your exact business workflows.",
-  );
+  usePageSeo({
+    title: "Custom Technology Solutions | Codefest Studio",
+    description:
+      "When a ready-to-deploy product isn't the right fit, Codefest Studio designs and builds custom technology around your exact business workflows.",
+  });
 
   return (
     <>

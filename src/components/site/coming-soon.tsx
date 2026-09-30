@@ -1,6 +1,13 @@
 import { CalendarClock } from "lucide-react";
+import { usePageSeo } from "@/hooks/use-page-seo.ts";
 
 export default function ComingSoon({ title }: { title: string }) {
+  usePageSeo({
+    title: `${title} | Codefest Studio`,
+    description: `The ${title} page for Codefest Studio will be published soon.`,
+    robots: "noindex, follow",
+  });
+
   return (
     <div className="relative flex min-h-[60vh] flex-col items-center justify-center overflow-hidden px-4 py-24 text-center">
       <div className="pointer-events-none absolute inset-0 -z-10">

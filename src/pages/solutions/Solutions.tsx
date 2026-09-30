@@ -7,10 +7,11 @@ import { usePageSeo } from "@/hooks/use-page-seo.ts";
 import { solutions } from "@/lib/solutions.ts";
 
 export default function Solutions() {
-  usePageSeo(
-    "Industry Solutions | Codefest Studio",
-    "Technology solutions built around your industry — logistics, warehousing, supply chain, manufacturing, retail, hospitality, distribution and enterprise operations.",
-  );
+  usePageSeo({
+    title: "Industry Solutions | Codefest Studio",
+    description:
+      "Technology solutions built around your industry — logistics, warehousing, supply chain, manufacturing, retail, hospitality, distribution and enterprise operations.",
+  });
 
   return (
     <>

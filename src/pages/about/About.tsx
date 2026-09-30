@@ -6,10 +6,11 @@ import GlobalCta from "@/components/site/global-cta.tsx";
 import { usePageSeo } from "@/hooks/use-page-seo.ts";
 
 export default function About() {
-  usePageSeo(
-    "About Us | Codefest Studio",
-    "Codefest Studio is a technology solutions and product management company building enterprise products and custom technology around the way businesses work.",
-  );
+  usePageSeo({
+    title: "About Us | Codefest Studio",
+    description:
+      "Codefest Studio is a technology solutions and product management company building enterprise products and custom technology around the way businesses work.",
+  });
 
   return (
     <>

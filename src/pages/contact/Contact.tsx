@@ -4,10 +4,11 @@ import ContactInfo from "@/pages/contact/_components/contact-info.tsx";
 import { usePageSeo } from "@/hooks/use-page-seo.ts";
 
 export default function Contact() {
-  usePageSeo(
-    "Contact Us | Codefest Studio",
-    "Get in touch with Codefest Studio to discuss a technology product or a custom technology solution for your business.",
-  );
+  usePageSeo({
+    title: "Contact Us | Codefest Studio",
+    description:
+      "Get in touch with Codefest Studio to discuss a technology product or a custom technology solution for your business.",
+  });
 
   return (
     <>

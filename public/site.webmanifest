@@ -1,0 +1,23 @@
+{
+  "name": "Codefest Studio",
+  "short_name": "Codefest",
+  "description": "Technology solutions and ready-to-deploy enterprise products for business operations.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#12142A",
+  "theme_color": "#3D3DB8",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.jpg",
+      "type": "image/jpeg",
+      "sizes": "180x180",
+      "purpose": "any"
+    }
+  ]
+}

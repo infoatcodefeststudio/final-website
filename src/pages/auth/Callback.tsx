@@ -5,6 +5,7 @@ import { useConvexAuth, useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api.js";
 import { Spinner } from "@/components/ui/spinner.tsx";
 import { Button } from "@/components/ui/button.tsx";
+import { usePageSeo } from "@/hooks/use-page-seo.ts";
 import {
   authCallbackMessages,
   type AuthCallbackMessages,
@@ -23,6 +24,12 @@ export default function AuthCallback({
     tryAgain = authCallbackMessages.en.tryAgain,
   } = {},
 }: AuthCallbackProps): React.JSX.Element {
+  usePageSeo({
+    title: "Signing in | Codefest Studio",
+    description: "Completing sign-in to Codefest Studio.",
+    robots: "noindex, nofollow",
+  });
+
   const navigate = useNavigate();
   const { isAuthenticated: isConvexAuthenticated } = useConvexAuth();
   const updateCurrentUser = useMutation(api.users.updateCurrentUser);

@@ -3,8 +3,11 @@ import ProductShowcase from "@/pages/Index/_components/product-showcase.tsx";
 import BrandStatement from "@/pages/Index/_components/brand-statement.tsx";
 import WhyCodefest from "@/pages/Index/_components/why-codefest.tsx";
 import GlobalCta from "@/components/site/global-cta.tsx";
+import { homePageSeo, usePageSeo } from "@/hooks/use-page-seo.ts";
 
 export default function Index() {
+  usePageSeo(homePageSeo);
+
   return (
     <>
       <Hero />
